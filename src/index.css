@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  font-size: 3rem;
+}
+label {
+  font-size: 3.5rem;
+}
+h1 {
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+}
+button {
+  height: 3rem;
+  width: 10rem;
+  font-size: 2rem;
+  border-radius: 20px;
+  margin-left: 30px;
+  cursor: pointer;
+  background-color: rgb(0, 129, 101);
+  color: white;
+  font-weight: 900;
+}
+
+button:hover {
+  border-color: rgb(0, 255, 128);
+  background-color: bisque;
+  color: rgb(2, 2, 1);
+}
+input {
+  width: 30%;
+  height: 3rem;
+  font-size: 2.5rem;
+  margin-left: 30px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgb(34, 39, 15);
+  color: white;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #030303;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.game-card {
+  width: 50%;
+  height: 80%;
+  background-color: rgb(15, 24, 26);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(250, 230, 115);
+}
+
+.game-display-area {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.titles-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.result-display {
+  display: flex;
+  overflow: auto;
+  flex-grow: inherit;
+  height: 60vh;
+  flex: 1;
+  background-color: rgb(0, 0, 0);
+}
+.entities {
+  height: 90%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.user-guess {
+  width: 40%;
+}
+
+.number {
+  width: 30%;
+}
+
+.order {
+  width: 30%;
+}
+
+.titles {
+  font-size: 3rem;
+  text-decoration: underline;
+}
+
+.user-interactions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+guessed-number {
+  display: flex;
+}
+
+.counter-numbers {
+  color: rgb(248, 248, 248);
+}
