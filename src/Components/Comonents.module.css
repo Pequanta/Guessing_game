@@ -71,19 +71,27 @@ span {
 .subMessage {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1200px) {
+  .pageCover img {
+    margin-top: -80%;
+    margin-bottom: 50%;
+    width: 6rem;
+    height: 6rem;
+  }
   span {
     font-size: 1.5rem;
     text-align: justify;
     padding: 20px;
   }
-  button {
-    font-size: 1.4rem;
-    margin-top: 2rem;
-    max-width: 32%;
+  .subMessage button {
+    font-size: 1.2rem;
+    max-width: 70%;
+    margin-left: 2px;
+    max-height: 2.5rem;
+    padding: 1px;
   }
   h1 {
     font-size: 1.8rem;
@@ -95,13 +103,6 @@ span {
     font-size: 1.5rem;
     text-align: justify;
     padding: 20px;
-  }
-  button {
-    font-size: 1.2rem;
-    max-width: 32%;
-    margin-left: 2px;
-    max-height: 2.5rem;
-    padding: 1px;
   }
   h1 {
     font-size: 1.8rem;
