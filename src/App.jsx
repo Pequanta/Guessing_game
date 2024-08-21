@@ -2,7 +2,7 @@ import "./index.css";
 import React, { useState } from "react";
 import MainGameArea from "./MainGameArea";
 import StartMessage from "./Components/StartMessage.jsx";
-import GameoverMessage from "./Components/GameoverMessage.jsx";
+import GameEndMessage from "./Components/GameEndMessaage.jsx";
 function App() {
   const [gameStarting, setGameStarting] = useState(true);
   const [gameOver, setGameOver] = useState(false);
@@ -18,14 +18,14 @@ function App() {
       )}
       {gameStarting && <StartMessage gameStartingFunction={setGameStarting} />}
       {gameOver && (
-        <GameoverMessage
+        <GameEndMessage
           gameStartingFunction={setGameStarting}
           gameOverFunction={setGameOver}
           notification={"gameover"}
         />
       )}
       {gameWon && (
-        <GameoverMessage
+        <GameEndMessage
           gameStartingFunction={setGameStarting}
           gameWonFunction={setGameWon}
           notification={"gamewon"}

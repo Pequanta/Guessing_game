@@ -8,7 +8,11 @@ function MainGameArea(props) {
       let generatedNumbers = new Set();
       let result = "";
       while (generatedNumbers.size < 4) {
-        let num = Math.floor((Math.random() + 0.1) * 10) % 10;
+        let cont = Math.random();
+        if (cont >= 0.9) {
+          cont -= 0.1;
+        }
+        let num = Math.floor((cont + 0.1) * 10) % 10;
         if (generatedNumbers.has(num)) continue;
         generatedNumbers.add(num);
       }
@@ -56,7 +60,6 @@ function MainGameArea(props) {
       props.gameWonFunction(true);
     }
     setCountTrials(countTrials + 1);
-    console.log(countTrials);
   };
   const handleInputChange = (event) => {
     const guess = event.target.value;
@@ -67,7 +70,7 @@ function MainGameArea(props) {
       <div className="game-card">
         <div className="game-display-area">
           <div className="titles-container">
-            <div className="titles">User Guess</div>
+            <div className="titles">Guess</div>
             <div className="titles">Number</div>
             <div className="titles">Order</div>
           </div>
@@ -80,7 +83,7 @@ function MainGameArea(props) {
                       <span className="counter-numbers">
                         {index + 1 + ".  "}
                       </span>
-                      <span>{guess}</span>
+                      <span className="guessN">{guess}</span>
                     </li>
                   ))}
                 </ol>
@@ -108,7 +111,6 @@ function MainGameArea(props) {
         </div>
       </div>
       <div className="user-interactions">
-        <h1>Guess</h1>
         <input
           className="guess-input"
           onChange={(event) => handleInputChange(event)}

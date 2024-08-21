@@ -8,7 +8,7 @@
 }
 
 .pageCover button {
-  width: 15rem;
+  width: 13rem;
   padding: 10px;
   height: 4rem;
   margin-top: 30px;
@@ -36,7 +36,7 @@ span {
 
 .card {
   height: 40vh;
-  width: 35%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,11 +44,12 @@ span {
   background-color: rgb(25, 31, 7);
   border-radius: 20px;
   box-shadow: 1px 2px 10px white;
+  gap: 10px;
 }
 
 .userResponse {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-top: 50px;
 }
 
@@ -71,4 +72,64 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  span {
+    font-size: 1.5rem;
+    text-align: justify;
+    padding: 20px;
+  }
+  button {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    max-width: 32%;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  span {
+    font-size: 1.5rem;
+    text-align: justify;
+    padding: 20px;
+  }
+  button {
+    font-size: 1.2rem;
+    max-width: 32%;
+    margin-left: 2px;
+    max-height: 2.5rem;
+    padding: 1px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    margin: auto;
+    width: 70%;
+    max-height: 100hv;
+  }
+  .userResponse {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  span {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+  }
+  button {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    max-width: 65%;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
 }
